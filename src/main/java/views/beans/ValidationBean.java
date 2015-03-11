@@ -17,17 +17,17 @@ public class ValidationBean implements Serializable {
 
     @Max(10)
     @Min(3)
-    private int edad;
+    private int age;
 
     @Digits(integer = 3, fraction = 0)
-    private double valor;
+    private double quantity;
 
     @Size(min = 4, max = 6, message = "entre 4 yyy 6")
-    private String mensaje;
+    private String message;
 
     @DecimalMax("30.00")
-    private double descuento;
-
+    private double offer;
+    
     public ValidationBean() {
         super();
     }
@@ -36,36 +36,36 @@ public class ValidationBean implements Serializable {
         return null;
     }
 
-    public double getValor() {
-        return valor;
+    public int getAge() {
+        return age;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public String getMensaje() {
-        return mensaje;
+    public double getQuantity() {
+        return quantity;
     }
 
-    public void setMensaje(String mensaje) {
-        this.mensaje = mensaje;
+    public void setQuantity(double quantity) {
+        this.quantity = quantity;
     }
 
-    public double getDescuento() {
-        return descuento;
+    public String getMessage() {
+        return message;
     }
 
-    public void setDescuento(double descuento) {
-        this.descuento = descuento;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
-    public int getEdad() {
-        return edad;
+    public double getOffer() {
+        return offer;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setOffer(double offer) {
+        this.offer = offer;
     }
 
 }
