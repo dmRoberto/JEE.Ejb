@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"        
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>JSF 2: Hola JSF</title>
+</h:head>
+<h:body>
+	<h1>EJB: validacion</h1>
+	<h:form>
+		 <p>Edad:<h:inputText id="e" value="#{validationBean.edad}"/><h:message for="e" /></p>
+         <p>Valor:<h:inputText id="v" value="#{validationBean.valor}"/><h:message for="v" /></p>
+         <p>Mensaje:<h:inputText id="m" value="#{validationBean.mensaje}"/><h:message for="m" /></p>
+         <p>Descuento:<h:inputText id="d" value="#{validationBean.descuento}"/><h:message for="d" /></p>
+		 <h:commandButton value="submit" type="submit" action="#{validacionBean.process}" />
+    </h:form>
+    <p><a href="index.html">Volver</a></p>
+</h:body>
+</html>
