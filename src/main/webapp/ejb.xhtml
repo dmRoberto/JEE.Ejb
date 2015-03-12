@@ -9,20 +9,23 @@
 </h:head>
 <h:body>
 	<h1>EJB</h1>
-	<h2>StateLess</h2>
+	<h2>Stateless</h2>
 	<h:form>
-		 <p>Stateless:<h:inputText id="less" value="#{ejb.value}"/><h:message for="less" /></p>
+		 <p>Stateless:<h:inputText id="less" value="#{ejb.value}" size="30"/><h:message for="less" /></p>
 		 <h:commandButton value="submit" type="submit" action="#{ejb.stateless}" />
     </h:form>
     
     <h2>Stateful</h2>
     <p>items: #{ejb.items}</p>
     <h:form rendered="#{ejb.active}">
-         <p>Add:<h:inputText id="ful" value="#{ejb.value}"/><h:message for="ful" /></p>
+         <p>Add:<h:inputText id="ful" value="#{ejb.item}"/><h:message for="ful" /></p>
          <h:commandButton value="Add" type="submit" action="#{ejb.statefulAdd}" />
          <h:commandButton value="Remove" type="submit"  action="#{ejb.statefulRemove}" />
     </h:form>
     
+    <h2>Singleton</h2>
+    <p>items: #{ejb.id}</p>
+
     <p><a href="index.html">Volver</a></p>
 </h:body>
 </html>

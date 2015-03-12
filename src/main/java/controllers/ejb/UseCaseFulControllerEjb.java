@@ -32,5 +32,4 @@ public class UseCaseFulControllerEjb implements UseCaseFulController {
     public void remove() {
         list = null;
     }
-
 }

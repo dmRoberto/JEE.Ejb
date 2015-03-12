@@ -10,6 +10,7 @@ import javax.inject.Named;
 
 import controllers.UseCaseFulController;
 import controllers.UseCaseLessController;
+import controllers.UseCaseSingletonController;
 
 @Named
 @SessionScoped
@@ -22,8 +23,13 @@ public class Ejb implements Serializable {
     @Inject
     private UseCaseFulController useCaseFulController;
 
+    @Inject
+    private UseCaseSingletonController useCaseSingletonController;
+
     private String value;
 
+    private String item;
+    
     private List<String> items;
 
     private boolean active = true;
@@ -34,7 +40,7 @@ public class Ejb implements Serializable {
     }
 
     public String statefulAdd() {
-        useCaseFulController.addItem(value);
+        useCaseFulController.addItem(item);
         items = useCaseFulController.items();
         return null;
     }
@@ -71,6 +77,18 @@ public class Ejb implements Serializable {
 
     public boolean isActive() {
         return active;
+    }
+
+    public String getId() {
+        return useCaseSingletonController.id();
+    }
+
+    public String getItem() {
+        return item;
+    }
+
+    public void setItem(String item) {
+        this.item = item;
     }
 
 }
