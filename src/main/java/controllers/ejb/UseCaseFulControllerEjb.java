@@ -1,5 +1,6 @@
 package controllers.ejb;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,8 @@ import javax.ejb.Stateful;
 import controllers.UseCaseFulController;
 
 @Stateful
-public class UseCaseFulControllerEjb implements UseCaseFulController {
+public class UseCaseFulControllerEjb implements UseCaseFulController, Serializable {
+    private static final long serialVersionUID = 1L;
 
     private List<String> list;
 
